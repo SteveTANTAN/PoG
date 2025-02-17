@@ -1444,17 +1444,7 @@ if __name__ == '__main__':
                 question_id = data[Q_id] 
                 question_real_answer =  check_answerlist(file_name, question_string, question, datas,data)
 
-                # if file_name == "webqsp":
-                #     question_real_answer = data['Parses'][0]['Answers']
-                # if file_name == "cwq":
-                #     question_real_answer = data['answers']
-                # if file_name == "grailqa":
-                #     question_real_answer = data['answer']
-                # if file_name == "webquestions":
-                #     question_real_answer = data['answers']
-                # if file_name == "simpleqa":
-                #     question_real_answer = data['answer']
-                
+
                 if len(topic_entity) > 1:
                     continue
                 else:
@@ -1466,31 +1456,9 @@ if __name__ == '__main__':
                 #     print("answer is found in the database")
                 #     continue
                 if answer:
-                    # print("answer is found in the database")
-                    # if check_answer(answer, question_real_answer):
-                    # # save_to_large_db(answer_db, question_id, gpt3_answer)
-                    #     continue
                     if not using_beam_step1_only:
                         continue
-                if LLM_model == "gpt4":
-                    gpt3_answer = load_from_large_db(answer_gpt3_db, question_id)
-                    if gpt3_answer:
-                        if check_answer(gpt3_answer, question_real_answer):
-                            delete_data_by_question_id(answer_db, question_id)
-                            save_to_large_db(answer_db, question_id, gpt3_answer)
-                            continue
-                        else:
-                            print("gpt3 answer is not correct_explored on gpt4")
-                if "allr" in answer_add:
-                    previouse_answer = load_from_large_db(previouse_db_one_r, question_id)
-                    if check_answer(previouse_answer, question_real_answer):
-                        print("answer is found in the database without all relation!")
-                        delete_data_by_question_id(answer_db, question_id)
-                        save_to_large_db(answer_db, question_id, previouse_answer)
-                        continue
                 print("\n Question:", question)
-                # print("Machine_question:", data['machine_question'])
-                # print("answer:", question_real_answer)
 
                 print("topic_entity:", topic_entity)
 

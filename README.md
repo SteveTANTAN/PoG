@@ -20,6 +20,7 @@ If you interested or inspired by this work, you can cite us by:
 Before running PoG, please ensure that you have successfully installed either **Freebase** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md`.
 
 The required libraries for running ToG can be found in `requirements.txt`.
+For the APIs, you must use your own API in the run_LLM function of utils.py.
 
 To set up the environment, install the required dependencies using:
 

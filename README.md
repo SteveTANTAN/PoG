@@ -17,10 +17,9 @@ If you interested or inspired by this work, you can cite us by:
 ```
 
 ## Get started
-Before running PoG, please ensure that you have successfully installed either **Freebase** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md`.
+Before running PoG, please ensure you have successfully installed **Freebase** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md`.
 
-The required libraries for running ToG can be found in `requirements.txt`.
-For the APIs, you must use your own API in the run_LLM function of utils.py.
+The required libraries for running ToG can be found in `requirements.txt`. You must use your own API in the run_LLM function of utils.py for the APIs.
 
 To set up the environment, install the required dependencies using:
 
@@ -68,7 +67,7 @@ python PoG_single.py <Dataset_name> <sum/unsum> <beam_search:1, 12, 13, 123> <Po
   - `3` for using 3-hop
 
 ### KG usage:
-PoG utilze the Freebase KG. For more details about freebase installation, please refer to the Freebase dictoray.
+PoG utilze the Freebase KG. For more details about Freebase installation, please refer to the Freebase folder.
 
 ## Running the Dataset for Multi-Keyword Questions
 
@@ -84,7 +83,7 @@ The arguments are the same as those for `PoG_single.py`.
 ### Subgraph Loading:
 PoG_multi will load the subgraph in maximum depths firstly from KG.
 ### KG usage:
-PoG utilze the Freebase KG. For more details about freebase installation, please refer to the Freebase dictoray.
+PoG utilze the Freebase KG. For more details about Freebase installation, please refer to the Freebase folder.
 ## Checking the Answer
 
 Use the following command to check the answer:

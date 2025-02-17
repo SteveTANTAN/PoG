@@ -1,0 +1,17 @@
+[
+    {
+        "ID": "WebQTrn-241_dfb6c97ac9bf2f0ac07f27dd80f9edc2",
+        "compositionality_type": "conjunction",
+        "created": "2018-02-12T20:06:06",
+        "machine_question": "what countries share borders with france and is the location contains and airport that server Nijmegen",
+        "question": "What country bordering France contains an airport that serves Nijmegen?",
+        "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0f8l9c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0f8l9c ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.location.contains ?c .\n?c ns:aviation.airport.serves ns:m.05g2b . \n}",
+        "webqsp_ID": "WebQTrn-241",
+        "webqsp_question": "what countries share borders with france",
+        "topic_entity": {
+            "m.0f8l9c": "France",
+            "m.05g2b": "Nijmegen"
+        },
+        "answer": "Germany"
+    }
+]

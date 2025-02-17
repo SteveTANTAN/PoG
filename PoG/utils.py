@@ -23,7 +23,7 @@ def count_tokens(text, model="gpt-3.5-turbo"):
 def run_LLM(prompt, model,temperature=0.4):
     result = ''
     if "google" in model:
-        genai.configure(api_key="AIzaSyBOSMAUrzDmB3VjsuK1t61edVdXIJb_Wb8")
+        genai.configure(api_key="your_api_keys")
 
         # model = genai.GenerativeModel('gemini-1.5-flash')
         model = genai.GenerativeModel("gemini-1.5-flash")
@@ -52,7 +52,7 @@ def run_LLM(prompt, model,temperature=0.4):
 
     # openai_api_base = "http://localhost:8000/v1"
     elif "gpt" in model:
-        openai_api_key = "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"
+        openai_api_key = "your_api_keys"
         if model == "gpt4":
             # model = "gpt-4-0613"
             model = "gpt-4-turbo"

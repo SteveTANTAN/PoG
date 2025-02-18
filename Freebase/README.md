@@ -38,44 +38,6 @@ rdf_loader_run();
 
 Wait for a long time and then ready to use.
 
-## Mapping data to Wikidata
-
-Due to the partial incompleteness of the data present in the freebase dump, we need to map some of the entities with missing partial relationships to wikidata. We download these rdf data via this public [link](https://developers.google.com/freebase?hl=en#freebase-wikidata-mappings)
-
-we can use the above method to add it into virtuoso.
-
-## Test example
-
-```python
-import json
-from SPARQLWrapper import SPARQLWrapper, JSON
-
-SPARQLPATH = "http://localhost:8890/sparql"
-
-def test():
-    try:
-        sparql = SPARQLWrapper(SPARQLPATH)
-        sparql_txt = """PREFIX ns: <http://rdf.freebase.com/ns/>
-            SELECT distinct ?name3
-            WHERE {
-            ns:m.0k2kfpc ns:award.award_nominated_work.award_nominations ?e1.
-            ?e1 ns:award.award_nomination.award_nominee ns:m.02pbp9.
-            ns:m.02pbp9 ns:people.person.spouse_s ?e2.
-            ?e2 ns:people.marriage.spouse ?e3.
-            ?e2 ns:people.marriage.from ?e4.
-            ?e3 ns:type.object.name ?name3
-            MINUS{?e2 ns:type.object.name ?name2}
-            }
-        """
-        #print(sparql_txt)
-        sparql.setQuery(sparql_txt)
-        sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
-        print(results)
-    except:
-        print('Your database is not installed properly !!!')
-
-test()
 
 ```
 

@@ -81,7 +81,8 @@ python PoG_multi.py <Dataset_name> <sum/unsum> <beam_search:1, 12, 13, 123> <PoG
 The arguments are the same as those for `PoG_single.py`.
 
 ### Subgraph Loading:
-PoG_multi will load the subgraph in maximum depths firstly from KG.
+PoG_multi will load the subgraph at maximum depths first from KG as the database preparation. The loading time depends on the environment setup and memory allocated for the freebase server.
+
 ### KG usage:
 PoG utilze the Freebase KG. For more details about Freebase installation, please refer to the Freebase folder.
 ## Checking the Answer

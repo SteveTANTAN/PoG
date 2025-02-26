@@ -15,5 +15,3 @@ The current folder holds all the datasets we used, the statistics of the dataset
 | Creak                  | Bool          | 10,176      | 1,371 | MIT License|
 
 where * denotes we randomly selected 1,000 samples from the GrailQA and Simple Questions test set to constitute the testing set owing to the abundance of test samples.
-
-If the user wants to search with a different KG source, check out the `mid2qid` and `qid2mid` APIs of the simple-wikidata-db folder.

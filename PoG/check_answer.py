@@ -37,22 +37,6 @@ def check_in_path(paths, answer_list):
     return False
 
 
-def re_check_answer(data,answer_dict,answer_list,question_id, answer_db):
-    question = answer_dict['question']
-    split_answer = answer_dict['split_answer']
-    final_path_toal = answer_dict['final_entity_path']
-
-    reasult = check_n_explor(question,split_answer, data, final_path_toal, [],answer_generated_direct)
-    an_dict={}
-    an_dict["LLM_answer"] = reasult
-    print("Check answer by KG paths:", reasult)
-
-    if check_answer(an_dict, answer_list):
-        answer_dict["LLM_answer"] = reasult
-
-        delete_data_by_question_id(answer_db, question_id)
-        save_to_large_db(answer_db, question_id, answer_dict)
-    # continue
     
 if __name__ == '__main__':
     import sys
@@ -115,7 +99,7 @@ if __name__ == '__main__':
             version = 3
         # LLM_model = sys.argv[2]
         print("LLM_model:", LLM_model)
-    recheck = False
+
     countall_ = False
     Global_depth_1 = int(sys.argv[6])
 
@@ -140,8 +124,6 @@ if __name__ == '__main__':
         answer_db = f'answer/{file_name}_answer_{Global_depth}_gpt_{version}{answer_add}.db'
         print("answer_db:", answer_db)
 
-        # answer_db = f'subgraph/{file_name}_answer_{Global_depth}_gpt_3{answer_add}.db'
-        
 
 
         initialize_large_database(answer_db)
@@ -224,11 +206,7 @@ if __name__ == '__main__':
                     # print ("LLM answer:", answer_dict['LLM_answer'])
                 else:
                     if check_in_path(answer_dict['final_entity_path'], answer_list):
-                        if countall_:
-                            obtained_answer += 1
                         error_reasoning += 1
-                        if recheck:
-                            re_check_answer(data,answer_dict,answer_list,question_id, answer_db)
                         # re_check_answer(data,answer,answer_list,question_id, answer_db)
                     # print(answer_dict.keys())
                     # exit()

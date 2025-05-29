@@ -1,18 +1,17 @@
 # Paths-over-Graph (PoG) Code Documentation
 
 ## News!
-Our paper is accepted by WWW 2025 ! 
+Our paper has been accepted for publication at WWW 2025! 
 
 ## How to cite
-If you interested or inspired by this work, you can cite us by:
+If you are interested or inspired by this work, you can cite us by:
 ```sh
-@misc{tan2025pathsovergraph,
-      title={Paths-over-Graph: Knowledge Graph Empowered Large Language Model Reasoning}, 
-      author={Xingyu Tan and Xiaoyang Wang and Qing Liu and Xiwei Xu and Xin Yuan and Wenjie Zhang},
-      year={2025},
-      eprint={2410.14211},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{tan2025paths_over_graph,
+  title={Paths-over-graph: Knowledge graph empowered large language model reasoning},
+  author={Tan, Xingyu and Wang, Xiaoyang and Liu, Qing and Xu, Xiwei and Yuan, Xin and Zhang, Wenjie},
+  booktitle={Proceedings of the ACM on Web Conference 2025},
+  pages={3505--3522},
+  year={2025}
 }
 ```
 

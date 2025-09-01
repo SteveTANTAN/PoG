@@ -55,6 +55,10 @@ If you are interested or inspired by this work, you can cite us by:
 ```
 
 # Paths-over-Graph (PoG) Code Documentation
+<p align="center">
+  <img src="PoG_overall.jpg" alt="PoG"/>
+</p>
+
 ## Get started
 Before running PoG, please ensure you have successfully installed **Freebase** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md`.
 
@@ -144,6 +148,7 @@ For any issues, please refer to the error messages or modify the script paramete
 
 ## Claims
 This project uses the Apache 2.0 protocol. The project assumes no legal responsibility for any of the model's output and will not be held liable for any damages that may result from the use of the resources and output.
+
 
 
 

@@ -1,4 +1,24 @@
-# Paths-over-Graph (PoG) Code Documentation
+<p align="center">
+  <img src="logo2.png" alt="PoG Logo" width="300"/>
+</p>
+
+
+# Paths-over-Graph (PoG): Knowledge Graph Empowered Large Language Model Reasoning (WWW2025) 
+<p align="center">
+
+  <a href="https://arxiv.org/pdf/2410.14211" title="Paper (PDF)" target="_blank" rel="noopener">
+    <!-- file/pdf icon -->
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="8" y1="13" x2="16" y2="13"></line>
+      <line x1="8" y1="17" x2="16" y2="17"></line>
+    </svg>
+    <span>&nbsp;📄 Paper (PDF)</span>
+  </a>
+</p>
 
 ## News!
 Our paper has been accepted for publication at WWW 2025! 
@@ -15,6 +35,7 @@ If you are interested or inspired by this work, you can cite us by:
 }
 ```
 
+# Paths-over-Graph (PoG) Code Documentation
 ## Get started
 Before running PoG, please ensure you have successfully installed **Freebase** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md`.
 
@@ -104,4 +125,5 @@ For any issues, please refer to the error messages or modify the script paramete
 
 ## Claims
 This project uses the Apache 2.0 protocol. The project assumes no legal responsibility for any of the model's output and will not be held liable for any damages that may result from the use of the resources and output.
+
 

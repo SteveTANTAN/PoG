@@ -8,10 +8,12 @@
 
 <p align="center">
   <!-- Project homepage -->
-  <a href="https://github.com/SteveTANTAN/PoG/blob/main/README.md" target="_blank">
-    <img alt="Project Page"
-         src="https://img.shields.io/badge/Page-Homepage-00BFFF?style=for-the-badge&logo=firefox-browser&logoColor=white">
-  </a>
+<a href="https://stevetantan.github.io/PoG/" target="_blank">
+  <img src="logo2.png" alt="PoG Logo" height="28" style="vertical-align:middle; margin-right:4px;">
+  <img alt="Project Page"
+       src="https://img.shields.io/badge/Page-Homepage-00BFFF?style=for-the-badge&logoColor=white">
+</a>
+
 
   <!-- arXiv -->
   <a href="https://arxiv.org/abs/2410.14211" target="_blank">
@@ -29,10 +31,10 @@
   </a>
 
   <!-- Plog: Agentic Data Lab -->
-  <a href="https://mp.weixin.qq.com/s/7PFIr8y93vDgOjUlOXXM6A" target="_blank">
-    <img alt="Plog: Agentic Data Lab"
-         src="https://img.shields.io/badge/Plog-Agentic%20Data%20Lab-8A2BE2?style=for-the-badge&logo=book-open&logoColor=white">
-  </a>
+<a href="https://mp.weixin.qq.com/s/7PFIr8y93vDgOjUlOXXM6A" target="_blank">
+  <img alt="Plog: Agentic Data Lab (中文)"
+       src="https://img.shields.io/badge/Plog-Agentic%20Data%20Lab-8A2BE2?style=for-the-badge&logo=wechat&logoColor=white">
+</a>
 </p>
 
 
@@ -142,6 +144,7 @@ For any issues, please refer to the error messages or modify the script paramete
 
 ## Claims
 This project uses the Apache 2.0 protocol. The project assumes no legal responsibility for any of the model's output and will not be held liable for any damages that may result from the use of the resources and output.
+
 
 
 

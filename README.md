@@ -8,7 +8,7 @@
 
 <p align="center">
   <!-- Project homepage -->
-<a href="https://stevetantan.github.io/PoG/" target="_blank">
+<a href="https://github.com/SteveTANTAN/PoG/blob/main/README.md" target="_blank">
   <img src="logo2.png" alt="PoG Logo" height="28" style="vertical-align:middle; margin-right:4px;">
   <img alt="Project Page"
        src="https://img.shields.io/badge/Page-Homepage-00BFFF?style=for-the-badge&logoColor=white">
@@ -144,6 +144,7 @@ For any issues, please refer to the error messages or modify the script paramete
 
 ## Claims
 This project uses the Apache 2.0 protocol. The project assumes no legal responsibility for any of the model's output and will not be held liable for any damages that may result from the use of the resources and output.
+
 
 
 

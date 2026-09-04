@@ -722,7 +722,7 @@ def bfs_with_intersection_only(graph, entity_list, hop):
     # 使用多线程并行执行node_expand
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(node_expand_with_paths, graph, entity, hop): entity for entity in entity_list}
-        paths_dict = {entity: future.result() for entity, future in zip(entity_list, as_completed(futures))}
+        paths_dict = {futures[future]: future.result() for future in as_completed(futures)}
     
     # 计算所有实体的路径交集
     intersection = set.intersection(*(set(paths.keys()) for paths in paths_dict.values()))
@@ -746,7 +746,7 @@ def create_subgraph_through_intersection3s(graph, entity_list, hop):
     from concurrent.futures import ThreadPoolExecutor, as_completed
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(node_expand_with_paths, graph, entity, hop): entity for entity in entity_list}
-        paths_dict = {entity: future.result() for entity, future in zip(entity_list, as_completed(futures))}
+        paths_dict = {futures[future]: future.result() for future in as_completed(futures)}
 
     subgraph = {}
 
@@ -781,7 +781,7 @@ def create_subgraph_through_intersections(graph, entity_list, intersection, tota
 
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(node_expand_with_paths, graph, entity, hop): entity for entity in entity_list}
-        paths_dict = {entity: future.result() for entity, future in zip(entity_list, as_completed(futures))}
+        paths_dict = {futures[future]: future.result() for future in as_completed(futures)}
 
     complete_subgraph = {}
     reduce_entity_names = {}
@@ -888,7 +888,7 @@ def bfs_with_intersection_inter(graph, entity_list, hop):
     # 使用多线程并行执行node_expand
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(node_expand_with_paths, graph, entity, hop): entity for entity in entity_list}
-        paths_dict = {entity: future.result() for entity, future in zip(entity_list, as_completed(futures))}
+        paths_dict = {futures[future]: future.result() for future in as_completed(futures)}
     paths = set()
     
     # 计算所有实体的路径交集
@@ -942,7 +942,7 @@ def bfs_with_intersection(graph, entity_list, hop):
     # Perform node expansion in parallel
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(node_expand_with_paths, graph, entity, hop): entity for entity in entity_list}
-        paths_dict = {entity: future.result() for entity, future in zip(entity_list, as_completed(futures))}
+        paths_dict = {futures[future]: future.result() for future in as_completed(futures)}
 
     if len(entity_list) == 1:
         paths = set()
